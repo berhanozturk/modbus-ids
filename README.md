@@ -28,6 +28,10 @@ Ideal for energy systems, SCADA networks, industrial IoT, and PLC-based infrastr
 ```bash
 pip install -r requirements.txt
 ```
+---
+
+## 📁 Project Structure
+```bash
 modbus-ids/
 ├── modbus_ids.py              # Main IDS script
 ├── modbus_client.py           # Modbus client simulator
@@ -44,3 +48,55 @@ modbus-ids/
 ├── hardware-design/
 │   └── (optional PCB files, Altium designs)
 └── requirements.txt
+```
+---
+
+##🧪 Testing Environment
+Run everything locally via loopback (127.0.0.1)
+Or simulate on a private LAN (e.g. 192.168.x.x)
+Use included Python scripts for client/server communication
+
+---
+
+## ⚙️ Installation
+```bash
+git clone https://github.com/<your-username>/modbus-ids.git
+cd modbus-ids
+pip install -r requirements.txt
+sudo python3 modbus_ids.py
+```
+To install as a service:
+```bash
+sudo cp systemd/modbus-ids.service /etc/systemd/system/
+sudo systemctl daemon-reexec
+sudo systemctl enable modbus-ids
+sudo systemctl start modbus-ids
+```
+
+---
+
+🧠 Customization
+Add known trusted devices to configs/whitelist.txt
+
+Adjust alerting thresholds in modbus_ids.py
+
+Modify or disable automatic IP blocking if needed
+
+---
+
+🔐 Security Notice
+This tool interacts with system-level firewall rules (iptables). Use with caution in production. For critical SCADA systems, start in passive alert-only mode.
+
+---
+
+🙌 Contributions
+PRs, issues, forks — all are welcome.
+Let’s make OT/ICS environments safer together.
+
+📜 License
+MIT – Use freely, but responsibly.
+
+👨‍💻 Developer
+Berhan ÖZTÜRK – Electrical & Electronics Engineer
+🔗 [https://www.linkedin.com/in/berhanozturk/]
+☕ Support or sponsor via BuyMeACoffee (optional)
