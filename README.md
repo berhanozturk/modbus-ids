@@ -27,7 +27,7 @@ Ideal for energy systems, SCADA networks, industrial IoT, and PLC-based infrastr
 
 ```bash
 pip install -r requirements.txt
-
+```
 modbus-ids/
 ├── modbus_ids.py              # Main IDS script
 ├── modbus_client.py           # Modbus client simulator
@@ -44,11 +44,3 @@ modbus-ids/
 ├── hardware-design/
 │   └── (optional PCB files, Altium designs)
 └── requirements.txt
-git clone https://github.com/<your-username>/modbus-ids.git
-cd modbus-ids
-pip install -r requirements.txt
-sudo python3 modbus_ids.py
-sudo cp systemd/modbus-ids.service /etc/systemd/system/
-sudo systemctl daemon-reexec
-sudo systemctl enable modbus-ids
-sudo systemctl start modbus-ids
