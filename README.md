@@ -51,7 +51,7 @@ modbus-ids/
 ```
 ---
 
-##🧪 Testing Environment
+## 🧪 Testing Environment
 Run everything locally via loopback (127.0.0.1)
 Or simulate on a private LAN (e.g. 192.168.x.x)
 Use included Python scripts for client/server communication
